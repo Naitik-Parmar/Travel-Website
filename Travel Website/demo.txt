@@ -1,0 +1,533 @@
+1st --> HTMl
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>TRAVEL WEBSITE | WELCOME</title>
+</head>
+<body>
+    <header class="header">
+        <!-- <h1>WELCOME</h1> -->
+    </header>
+</body>
+</html>
+
+1st --> CSS 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,500&family=Montserrat:wght@300;400;500;700&family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.header{
+    height: 95vh;
+    /* border:20px solid green; */
+    /* background-image: url('../img/header-image.jpg'); */
+    /* background-image:linear-gradient(rgba(0,0,0,1),rgba(0,0,0,1)) , url('../img/header-image.jpg'); */
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../img/header-image.jpg');
+    /* background-position: top; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* h1{
+    color:white;
+    font-weight: 400;
+} */
+
+
+
+2nd --> HTMl
+<body>
+    <header class="header">
+        <!-- <h1>WELCOME</h1> -->
+
+        <nav class="navbar">
+            <h1 class="logo">WT</h1>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="./index.html">Home</a></li>
+                <li class="nav-item"><a href="./about.html">About</a></li>
+                <li class="nav-item"><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+
+
+2nd --> CSS 
+.header .logo , .header .navbar a{
+    color:white;
+}
+
+.navbar{
+    border:2px solid white;
+}
+
+.header .navbar .logo{
+    float:left;
+}
+
+.header .navbar .nav-items{
+    float:right;
+}
+
+.navbar::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+
+.header .navbar .nav-item{
+    display: inline-block;
+}
+
+
+
+
+
+
+
+3rd --> css styling (utility classes)
+html{
+    /* font-size: 10px; */
+    font-size: 62.5%;
+}
+
+body{
+    line-height: 1.7;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+p , li{
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+}
+
+h1,h2,h3{
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+
+
+/* ############################################## utility classes ######################################################## */
+
+.lg-heading{
+    font-size: 3.5rem;
+}
+
+.md-heading{
+    font-size: 2.5rem;
+}
+
+.text-red{
+    color:#e63946;
+}
+
+.text-light{
+    color:#f4f4f4;
+}
+
+.text-black{
+    color:#333333;
+}
+
+.text-gray{
+    color:#555555;
+}
+
+
+.navbar a:link,
+.navbar a:visited{
+    color:#f4f4f4;  
+}
+
+.navbar{
+    padding: 1rem;
+}
+
+.header .navbar .nav-items{
+    margin-top: 1rem;
+}
+
+.header .navbar .nav-item{
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+4th --> css styling (container styling)
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+
+
+
+
+5th --> css styling (link hover)
+.navbar a:hover{
+    border-bottom: 1px solid white;
+    padding: 0.3rem;
+}
+
+
+
+
+
+6th ---> HTML (header-content)
+<div class="header-content">
+            <h1 class="lg-heading text-light">travel the world</h1>
+            <p class="text-light">travel the world , experience the greatness , it's the best gift given by nature</p>
+            <a href="#">Explore Places</a>
+        </div>
+
+6th ---> css (header-content)
+.header-content h1{
+    text-transform: uppercase;
+    /* font-weight: 700; */
+}
+
+.header-content p{
+    text-transform: uppercase;
+}
+
+/* utility class */
+.btn{
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    margin: 0.5em 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.btn-primary{
+    background-color: #fff;
+    border-radius: 10%;
+    border-radius: 30%;
+    border-radius: 100px;
+    border-radius: 10rem;
+}
+
+
+
+
+
+
+
+7th --> css (center header-content)
+.header{
+    position: relative;
+}
+
+.header-content{
+    /* border: 2px solid white; */
+    position: absolute;
+    top:50%;
+    left:50%;
+    /* transform: translate(-50%); */
+    transform: translate(-50%,-50%);
+
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+}
+
+
+
+
+
+
+
+8th ---> css (showcase section)
+/* Showcase section styling */
+
+.showcase{
+    background-color: #ddd;
+    padding: 10rem 0;
+}
+
+.row{
+    height: 350px;
+    border:2px solid red;
+}
+
+.row1{
+    margin-bottom: 10rem;
+}
+
+.row1 .image-box,.row2 .text-box{
+    float:left;
+    width: 50%;
+}
+.row2 .image-box,.row1 .text-box{
+    float: right;
+    width: 50%;
+}
+
+.row .image-box{
+    border: 5px solid green;
+    height: 100%;
+}
+
+.row .text-box{
+    border: 5px solid blue;
+    padding: 3rem;
+}
+
+
+
+
+
+
+9th --> HTML(Improve Showcase)
+<section class="showcase">
+        <div class="container">
+
+            <div class="row row1">
+                <div class="image-box">
+                    <img src="./img/showcase-photo3.jpg" alt="Image-Description">
+                </div>
+                <div class="text-box">
+                    <h2 class="lg-heading">DEGANVY , U.K</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus neque commodi laborum, fugiat cupiditate veritatis eligendi illum molestiae laudantium recusandae laboriosam magni, quisquam placeat, incidunt reprehenderit ipsum dicta eos. Aut!</p>
+                </div>
+            </div>
+
+            <div class="row row2">
+                <div class="image-box">
+                    <img src="./img/showcase-photo1.jpg" alt="Image-Description">
+                </div>
+                <div class="text-box">
+                    <h2 class="lg-heading">DESERT , EGYPT</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur provident natus quas tempora itaque ad iure mollitia, odit reprehenderit beatae laboriosam laudantium inventore. Maiores quis officiis numquam, neque tempore ad.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+9th ---> CSS(Improve CSS)
+/* Improve Showcase */
+
+.row .image-box img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row{
+    background: #fff;
+}
+
+
+
+
+
+
+10th ---> HTML(Showcase button and color)
+<div class="row row1">
+                <div class="image-box">
+                    <img src="./img/showcase-photo3.jpg" alt="Image-Description">
+                </div>
+                <div class="text-box">
+                    <h2 class="lg-heading text-black">DEGANVY , U.K</h2>
+                    <p class="text-gray">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus neque commodi laborum, fugiat cupiditate veritatis eligendi illum molestiae laudantium recusandae laboriosam magni, quisquam placeat, incidunt reprehenderit ipsum dicta eos. Aut!</p>
+                    <a href="./about.html" class="btn btn-secondary">More</a>
+                </div>
+            </div>
+
+            <div class="row row2">
+                <div class="image-box">
+                    <img src="./img/showcase-photo1.jpg" alt="Image-Description">
+                </div>
+                <div class="text-box">
+                    <h2 class="lg-heading text-black">DESERT , EGYPT</h2>
+                    <p class="text-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur provident natus quas tempora itaque ad iure mollitia, odit reprehenderit beatae laboriosam laudantium inventore. Maiores quis officiis numquam, neque tempore ad.</p>
+                    <a href="./about.html" class="btn btn-secondary">More</a>
+                </div>
+            </div>
+
+
+
+10th ---> CSS(Showcase button styling)
+/* ###### Utility Class ######## */
+.btn-secondary{
+    border:2px solid #e63946;
+    border-radius: 1.5em;
+    color:#e63946;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+11th  ---> css(Box-shadow)
+/* box-showdow in showcase */
+.row{
+    /* box-shadow: 5px 5px 20px 0px #aaa; */
+    /* box-shadow: 0px 0px 20px 0px #aaa; */
+    /* box-shadow: 0px 0px 20px 0px #000; */
+    /* box-shadow: 0px 0px 20px 0px #00000030; */
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+12th --> HTML(feature section)
+   <section class="feature">
+        <div class="container">
+
+            <div class="box-wrapper">
+                <div class="box box-1">
+                    <h2 class="md-heading">Adventurous</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, iste facilis! Recusandae nostrum aperiam iste magnam, sunt assumenda quos magni!</p>
+                </div>
+                <div class="box box-2">
+                    <h2 class="md-heading">Less Price</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, iste facilis! Recusandae nostrum aperiam iste magnam, sunt assumenda quos magni!</p>
+                </div>
+                <div class="box box-3">
+                    <h2 class="md-heading">Experience</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, iste facilis! Recusandae nostrum aperiam iste magnam, sunt assumenda quos magni!</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+12th --> css(feature styling)
+/* Feature Section Styling */
+.feature{
+    padding: 10rem 0;
+}
+
+.box-wrapper{
+    /* border: 2px solid red;; */
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.496);
+}
+
+.box{
+    width: 33.3333333%;
+    float: left;
+    /* border: 2px solid black; */
+    padding: 2rem;
+    text-align: center;
+}
+
+.box-wrapper::after{
+    content: "";
+    display: block;
+    clear:both;
+}
+
+.box-1,.box-3{
+    background: #333;
+    color: white;
+}
+
+.box-2{
+    background: #e63946;
+    color: white;
+}
+
+
+
+
+
+
+
+
+13th --> fontawesome styling 
+
+
+
+14th --> HTML(Footer Section)
+<footer class="footer">
+        <div class="social-media-links">
+            <i class="fab fa-facebook fa-4x"></i>
+            <i class="fab fa-twitter fa-4x"></i>
+            <i class="fab fa-instagram fa-4x"></i>
+        </div>
+
+        <p>World Travel &copy; 2020, All Rights Reserved</p>
+    </footer>
+
+
+
+
+14th --> CSS Footer Styling
+/* Footer Styling CSS */
+.footer{
+    background-color: #333333;
+    color:#fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-media-links i{
+    margin: 2rem;;
+}
+
+
+
+
+15th --> Explore-Places button(HTML)
+
+<a href="#Explore-Places">
+id="Explore-Places" in showcase section
